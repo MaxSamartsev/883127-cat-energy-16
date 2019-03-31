@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Максим Самарцев](https://up.htmlacademy.ru/adaptive/16/user/883127).
-* Наставник: `Неизвестно`.
+* Наставник: [Константин Сёмин](https://htmlacademy.ru/profile/id39368).
 
 ---
 
