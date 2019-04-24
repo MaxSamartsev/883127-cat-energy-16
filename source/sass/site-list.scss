@@ -6,6 +6,18 @@
   text-align: center;
 
   border-bottom: 1px solid #e6e6e6;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 35px;
+
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-left: 34px;
+  }
 }
 
 .site-list__link-title {
@@ -14,7 +26,7 @@
   display: inline-block;
 
   font-size: 20px;
-  line-height: 25px;
+  line-height: 20px;
   text-align: center;
   color: #111111;
   text-transform: uppercase;
@@ -26,6 +38,18 @@
 
   &:active {
     color: #b7b7b7;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 25px;
+    background-color: transparent;
+    z-index: 2;
   }
 }
 
@@ -39,4 +63,24 @@
   height: 2px;
 
   background-color: #68b738;
+
+  @media screen and (min-width: $tablet-width) {
+    bottom: -9px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    bottom: -10px;
+  }
+}
+
+.site-list--contrast .site-list__link-title {
+  @media screen and (min-width: $desktop-width) {
+    color: #ffffff;
+  }
+}
+
+.site-list--contrast .site-list__link-title::after {
+  @media screen and (min-width: $desktop-width) {
+    background-color: #ffffff;
+  }
 }

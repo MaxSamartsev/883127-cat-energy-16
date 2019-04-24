@@ -1,12 +1,40 @@
 .title {
   font-weight: normal;
   font-size: 36px;
-  line-height: 60px;
   text-align: center;
   color: #000000;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title--main {
   line-height: 36px;
   color: #ffffff;
+
+  @media screen and (min-width: $tablet-width) {
+    color: #000000;
+    line-height: 60px;
+    width: 427px;
+    text-align: left;
+  }
+}
+
+.title--page {
+  text-align: left;
+  padding: 20px;
+  margin-top: 16px;
+  margin-bottom: 29px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 36px;
+    margin-left: 11px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 52px;
+    margin-left: 90px;
+  }
 }

@@ -1,23 +1,155 @@
 .catalog-list {
+  padding: 0;
+
   list-style: none;
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-left: 70px;
+    padding-right: 30px;
+    justify-content: space-around;
+  }
+}
+
+.catalog-list__item {
+  padding-right: 19px;
+  padding-left: 19px;
+
+  border: 1px solid #e6e6e6;
+
+  @media screen and (min-width: $tablet-width) {
+    position: relative;
+
+    width: 42%;
+    margin-top: 116px;
+    margin-right: 4%;
+    margin-bottom: 24px;
+    margin-left: 4%;
+    padding-right: 37px;
+    padding-left: 37px;
+
+    background-color: #f2f2f2;
+    border: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 27px;
+  }
+}
+
+.catalog-list__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.catalog-list__image {
+  width: 50%;
+
+  @media screen and (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 305px;
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+.catalog-list__image img {
+  display: block;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.catalog-list__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .catalog-list__titel {
+  margin-top: 21px;
+  margin-bottom: 13px;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 40px;
+    margin-top: 163px;
+    margin-bottom: 19px;
+
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.catalog-list__titel-text {
+  width: 60%;
+  margin: 0;
+
+  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
-}
 
-.catalog-list__titel-text {
-  font-size: 16px;
+  @media screen and (min-width: $tablet-width) {
+    width: 55%;
+    margin: 0 auto;
+
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 130px;
+  }
 }
 
 .catalog-list__desc {
+  max-width: 200px;
+
+  border-collapse: collapse;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 14px;
   font-family: "Arial", sans-serif;
   color: #444444;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 33px;
+
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+.catalog-list__desc td {
+  padding-right: 0;
+  padding-left: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .catalog-list__desc-label {
@@ -28,16 +160,93 @@
   text-align: right;
 }
 
+.show-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-width) {
+    background-color: inherit;
+  }
+}
+
+.show-all__image {
+  margin-top: 26px;
+  margin-bottom: 11px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 55px;
+    margin-bottom: 27px;
+  }
+}
+
+.show-all__image img {
+  @media screen and (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .show-all__titel {
+  margin-top: 10px;
+  margin-bottom: 9px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 0;
+    padding-left: 16%;
+    padding-right: 16%;
+    text-align: center;
+    margin-bottom: 5px;
+    min-height: 80px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.show-all__titel-text {
+  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
+
 .show-all__text {
+  margin-bottom: 20px;
+
   font-size: 12px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
   color: #444444;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-left: 16%;
+    padding-right: 16%;
+    margin-bottom: 85px;
+    min-height: 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.catalog-list__button {
+  margin-bottom: 23px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }

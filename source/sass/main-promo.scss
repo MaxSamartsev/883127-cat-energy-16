@@ -3,27 +3,53 @@
 
   display: flex;
   flex-direction: column;
+  padding-bottom: 2px;
 }
 
 .main-promo::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: -1;
 
   width: 100%;
   height: 305px;
 
   background-image: url("..//img/index-background-mobile@1x.jpg");
+  background-color: #77bb4e;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and (min-width: $tablet-width) {
+    background: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-image: url("..//img/index-background-desktop@1x.jpg");
+    width: 48.7%;
+    top: -116px;
+    right: 0;
+    height: 696px;
+    z-index: 1;
+  }
 }
 
 .main-promo__promo__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: $tablet-width) {
+    align-items: flex-start;
+    padding-top: 36px;
+    padding-left: 87px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 86px;
+    padding-left: 149px;
+  }
 }
 
 .main-promo__slogan {
@@ -34,13 +60,60 @@
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 16px;
+    margin-bottom: 48px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
 }
 
 .main-promo__title {
   margin-top: 27px;
   margin-bottom: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
+}
+
+.main-promo__button {
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 497px;
+    margin-left: 2px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 226px;
+  }
 }
 
 .main-promo__image {
-  margin-top: 29px;
+  margin-top: 28px;
+  margin-bottom: 1px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0;
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+    right: 4%;
+    top: 258px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    left: 40%;
+    top: 26px;
+    z-index: 3;
+    width: 552px;
+    height: 499px;
+  }
 }
