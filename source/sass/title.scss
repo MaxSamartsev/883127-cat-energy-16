@@ -15,18 +15,20 @@
   color: #ffffff;
 
   @media screen and (min-width: $tablet-width) {
-    color: #000000;
-    line-height: 60px;
     width: 427px;
+
+    line-height: 60px;
     text-align: left;
+    color: #000000;
   }
 }
 
 .title--page {
-  text-align: left;
-  padding: 20px;
   margin-top: 16px;
   margin-bottom: 29px;
+  padding: 20px;
+
+  text-align: left;
 
   @media screen and (min-width: $tablet-width) {
     margin-top: 36px;

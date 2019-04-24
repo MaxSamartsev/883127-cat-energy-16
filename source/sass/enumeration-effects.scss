@@ -7,8 +7,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-top: 16px;
     margin-left: 80px;
+    padding-top: 16px;
   }
 }
 
@@ -33,9 +33,9 @@
   list-style: none;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 21px;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 21px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -97,6 +97,7 @@
       position: absolute;
       top: 15px;
       right: 40px;
+      z-index: -1;
 
       width: 200px;
       height: 200px;
@@ -106,7 +107,6 @@
       line-height: 281px;
       font-family: "Oswald", "Arial", sans-serif;
       color: #f2f2f2;
-      z-index: -1;
     }
 
     @media screen and (min-width: $desktop-width) {

@@ -10,11 +10,12 @@
 }
 
 .copyright__link-title {
+  margin-bottom: 4px;
+
   font-size: 16px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
   color: #444444;
-  margin-bottom: 4px;
   letter-spacing: -0.2px;
 
   @media screen and (min-width: $tablet-width) {

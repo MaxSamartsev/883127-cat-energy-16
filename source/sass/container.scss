@@ -1,15 +1,15 @@
 .container-horizontal {
-  margin-left: 20px;
   margin-right: 20px;
+  margin-left: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-left: 30px;
     margin-right: 30px;
+    margin-left: 30px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-left: 40px;
     margin-right: 40px;
+    margin-left: 40px;
   }
 }
 
