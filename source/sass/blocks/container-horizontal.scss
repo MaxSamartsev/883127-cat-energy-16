@@ -12,15 +12,3 @@
     margin-left: 40px;
   }
 }
-
-.container {
-  margin: 20px;
-
-  @media screen and (min-width: $tablet-width) {
-    margin: 30px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    margin: 40px;
-  }
-}
