@@ -25,7 +25,26 @@
   }
 }
 
+.button--catalog {
+  font-size: 16px;
+}
+
+.button--promo {
+  width: 100%;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 245px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .button--grey {
+  font-size: 16px;
+  line-height: 18px;
   color: #444444;
 
   background-color: #f2f2f2;

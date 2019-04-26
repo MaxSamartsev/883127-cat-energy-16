@@ -1,0 +1,231 @@
+.commercial {
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+}
+
+.commercial__container {
+  position: relative;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 21px;
+  padding-left: 20px;
+
+  background-color: #f2f2f2;
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 57px;
+    padding-right: 0;
+    padding-left: 52px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: block;
+    width: 50%;
+    padding-bottom: 61px;
+    padding-left: 0;
+  }
+}
+
+.commercial__content-container {
+  @media screen and (min-width: $tablet-width) {
+    padding-right: 50px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-left: 53px;
+  }
+}
+
+.commercial__image {
+  position: relative;
+
+  display: block;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-shrink: 0;
+    order: 2;
+    width: 263px;
+    min-height: 293px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 0;
+    height: 0;
+    min-height: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 2px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #68b738;
+    border: 0 none;
+    border-radius: 50%;
+
+    @media screen and (min-width: $tablet-width) {
+      top: 35px;
+      left: 2px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      top: -10px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.commercial__image--cat-slim::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 10px;
+
+  width: 37px;
+  height: 49px;
+
+  background-image: url("..//img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet-width) {
+    top: 23px;
+    left: 31px;
+
+    width: 141px;
+    height: 194px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: -16px;
+    left: 66px;
+
+    width: 70px;
+    height: 98px;
+  }
+}
+
+.commercial__image--cat-pro::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -7px;
+
+  width: 67px;
+  height: 28px;
+
+  background-image: url("..//img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet-width) {
+    top: 78px;
+    left: -33px;
+
+    width: 268px;
+    height: 112px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 12px;
+    left: 34px;
+
+    width: 134px;
+    height: 56px;
+  }
+}
+
+.commercial__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+  padding-left: 71px;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 19px;
+    margin-bottom: 25px;
+    padding-left: 0;
+
+    font-size: 36px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 74px;
+    padding-left: 161px;
+  }
+}
+
+.commercial__text {
+  min-height: 97px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-bottom: 22px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+
+  border-bottom: 1px solid #d9d9d9;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    padding-bottom: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.commercial__link {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

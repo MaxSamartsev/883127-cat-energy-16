@@ -10,59 +10,77 @@
 </head>
 
 <body>
-  <header class="page-header page-header--nav-open">
+  <header class="page-header page-header--nav-closed page-header-nojs">
     <nav class="page-header__main-nav main-nav">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item"><a class="site-list__link-title" site-list__item href="index.html" title="Перейти на главную страницу">Главная</a></li>
-        <li class="site-list__item"><a class="site-list__link-title" href="catalog.html" title="Перейти на страницу каталога">Каталог продукции</a>
+        <li class="site-list__item"><a class="site-list__link-title" href="index.html"
+            title="Перейти на главную страницу">Главная</a></li>
+        <li class="site-list__item"><a class="site-list__link-title" href="catalog.html"
+            title="Перейти на страницу каталога">Каталог продукции</a>
         </li>
         <li class="site-list__item site-list__item--active"><a class="site-list__link-title" href="form.html"
             title="Перейти на страницу подбора программы">Подбор
             программы</a></li>
       </ul>
     </nav>
-    <div class="page-header__wrapper container">
-    <a href="index.html" title="Перейти на главную страницу" class="page-header__logo"><span class="visually-hidden">При
-        нажатии вы перейдете в начало главной страницы</span><img class="page-header__logo-image"
-        src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="192" height="40"></a>
-    <button class="page-header__nav-button" type="button"><span
-        class="visually-hidden">Открыть меню</span></button>
-      </div>
+    <div class="page-header__wrapper">
+      <a href="index.html" title="Перейти на главную страницу" class="page-header__logo"><span
+          class="visually-hidden">При
+          нажатии вы перейдете в начало главной страницы</span>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="192"
+            height="40">
+        </picture>
+      </a>
+      <button class="page-header__nav-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
   </header>
   <main>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <a class="page-footer__logo"> <span class="visually-hidden">При нажатии вы перейдете в начало главной
-          страницы</span>
-        <img class="page-footer__logo-image" src="..//img/logo-footer.svg" alt="Cat energy" width="128" height="24"></a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#" title="Мы в контакте"><span
-                class="visually-hidden">Мы в контакте</span><img src=".//img/icon-vk-mobile.svg" alt="В контакте"
-                width="22" height="12"></a>
-          </li>
-          <li>
-            <a class="social__link social__link--instagram" href="#" title="Мы в Инстаграме"><span
-                class="visually-hidden">Мы в Инстаграме</span><img src=".//img/icon-insta-mobile.svg" alt="Инстаграм"
-                width="16" height="16"></a>
-          </li>
-          <li>
-            <a class="social__link social__link--facebook" href="#" title="Мы в Фейсбуке"><span
-                class="visually-hidden">Мы в Фейсбуке</span><img src=".//img/icon-fb-mobile.svg" alt="Фейсбук"
-                width="10" height="19"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link-title" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML
-          Academy</a>
-        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy"><img
-            src=".//img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="34"></a>
-      </div>
+  <footer class="page-footer container-horizontal">
+    <a class="page-footer__logo page-footer__item"> <span class="visually-hidden">При нажатии вы перейдете в начало
+        главной
+        страницы</span>
+      <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="Cat energy" width="129" height="24"></a>
+    <div class="page-footer__social social page-footer__item">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#" title="Мы в контакте"><span
+              class="visually-hidden">Мы в контакте</span>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/icon-vk.svg"><img src="./img/icon-vk-mobile.svg"
+                alt="В контакте" width="22" height="12"></picture>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#" title="Мы в Инстаграме"><span
+              class="visually-hidden">Мы в Инстаграме</span>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/icon-insta.svg"><img src="
+                  ./img/icon-insta-mobile.svg" alt="Инстаграм" width="16" height="16">
+            </picture>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#" title="Мы в Фейсбуке"><span class="visually-hidden">Мы
+              в Фейсбуке</span>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/icon-fb.svg"><img src="./img/icon-fb-mobile.svg"
+                alt="Фейсбук" width="10" height="19"></picture>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright page-footer__item">
+      <a class="copyright__link-title" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML
+        Academy</a>
+      <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy"><img
+          src=".//img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="41"></a>
     </div>
   </footer>
+  <script src="./js/page-header.js"></script>
+  <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
 </body>
 
 </html>
