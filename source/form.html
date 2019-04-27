@@ -37,6 +37,75 @@
     </div>
   </header>
   <main>
+    <h1 class="title title--page">Подбор программы</h1>
+    <article class="program">
+      <h2 class="program__description">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+      <form class="program-form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="program-form__main-wrapper">
+          <fieldset class="program-form__partition">
+            <legend class="visually-hidden">Основные данные вашего кота</legend>
+            <label class="program-form__label">Имя:*<input class="program-form__input-data" type="text" name="cat-name"
+                placeholder="Барсик"></label>
+            <label class="program-form__label">Вес (кг):*<input class="program-form__input-data" type="text"
+                name="cat-name" placeholder="7"></label>
+            <label class="program-form__label">Возраст (лет)<input class="program-form__input-data" type="text"
+                name="cat-name" placeholder="7"></label>
+          </fieldset>
+          <fieldset class="program-form__partition">
+            <ul class="program-form__target-list">
+              <li><span class="program-form__radio-button radio-button"></span><label class="program-form__label"><input
+                    class="program-form__input-radio" type="radio" name="target" value="slimming"
+                    checked>Похудение</label></li>
+              <li><span class="program-form__radio-button radio-button"></span><label class="program-form__label"><input
+                    class="program-form__input-radio" type="radio" name="target" value="weight_gain">Набор массы</label>
+              </li>
+              <li><span class="program-form__radio-button radio-button"></span><label class="program-form__label"><input
+                    class="program-form__input-radio" type="radio" name="target" value="i_need_help">Не знаю (нужен ваш
+                  совет)</label></li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="program-form__partition">
+          <legend class="program-form__titel-partition titel-partition">Контактные даные (владельца кота)</legend>
+          <label class="program-form__label">E-mail:*<input class="program-form__input-data" type="email" name="email"
+              placeholder="kuklachev@gmail.com"></label>
+          <label class="program-form__label">Телефон:*<input class="program-form__input-data" type="tel"
+              name="telephone" placeholder="8 (960) 900-60-90"></label>
+        </fieldset>
+        <fieldset class="program-form__partition">
+          <legend class="program-form__titel-partition titel-partition">Комментарий</legend>
+          <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="program-form__partition">
+          <legend class="program-form__titel-partition titel-partition">Дополнительно</legend>
+          <ul class="program-form__additional-list">
+            <li><span class="program-form__checkbox checkbox"></span><label><input class="program-form__input-checkbox"
+                  type="checkbox" name="sweetener" checked>Сахарозаменитель</label></li>
+            <li><span class="program-form__checkbox checkbox"></span><label><input class="program-form__input-checkbox"
+                  type="checkbox" name="water">Питьевая вода</label></li>
+            <li><span class="program-form__checkbox checkbox"></span><label><input class="program-form__input-checkbox"
+                  type="checkbox" name="milk">Молоко</label></li>
+            <li><span class="program-form__checkbox checkbox"></span><label><input class="program-form__input-checkbox"
+                  type="checkbox" name="vitamins">Витамины</label></li>
+          </ul>
+        </fieldset>
+        <div>
+          <input class="program-form__submit-button button" type="submit">
+          <span class="program-form__note">* - Обязательные поля</span>
+        </div>
+      </form>
+    </article>
+    <section class="map">
+      <h2 class="visually-hidden">Кэт энерджи на карте</h2>
+      <section class="map__cooperation cooperation">
+        <h2 class="cooperation__titel">Приглашаем к сотрудничеству</h2>
+        <p class="cooperation__text">ул. Большая Конюшенная, д. 19/8</p>
+        <p class="cooperation__text">Санкт-Петербург</p>
+      </section>
+      <div class="map__content">
+        <!-- Тут будет карта -->
+      </div>
+    </section>
   </main>
   <footer class="page-footer container-horizontal">
     <a class="page-footer__logo page-footer__item"> <span class="visually-hidden">При нажатии вы перейдете в начало
