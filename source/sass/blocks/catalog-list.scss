@@ -1,6 +1,6 @@
 .catalog-list {
   padding: 0;
-
+  margin-bottom: 30px;
   list-style: none;
 
   @media screen and (min-width: $tablet-width) {
@@ -169,9 +169,3 @@
 .catalog-list__desc-data {
   text-align: right;
 }
-
-// .catalog-list__button {
-
-//   @media screen and (min-width: $tablet-width) {
-//   }
-// }
