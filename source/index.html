@@ -43,10 +43,12 @@
         <h2 class="main-promo__title title title--main">Функциональное питание для котов</h2>
         <span class="main-promo__slogan">Занялся собой? Займись котом!</span>
         <picture>
-          <source media="(min-width: 1300px)" srcset="./img/index-can-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg">
-          <img class="main-promo__image" src="./img/index-can-mobile@1x.png" alt="Cat Energy Pro 500г Курица"
-            width="280" height="271"></picture>
+          <source media="(min-width: 1300px)"
+            srcset="./img/index-can-desktop@1x.png 1x, ./img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="./img/index-can-tablet@1x.jpg 1x, ./img/index-can-tablet@1x.jpg 2x">
+          <img class="main-promo__image" src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png"
+            alt="Cat Energy Pro 500г Курица" width="280" height="271"></picture>
         <a class="main-promo__button button button--promo" href="form.html"
           title="Перейти на страницу подбора программы">Подобрать
           программу</a>
@@ -57,12 +59,10 @@
         <div class="commercial__image commercial__image--cat-slim"></div>
         <div class="commercial__content-container">
           <h2 class="commercial__title">Похудение</h2>
-          <p class="commercial__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
-            на
-            диету! Cat Energy Slim
-            поможет вашему питомцу сбросить лишний вес.</p>
+          <p class="commercial__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
+            диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="commercial__link" href="catalog-slim.html" title="Перейти на страницу каталога Slim">Каталог
-            Slim</a>
+            Slim <img src="./img/icon-right-arrow-long.svg" alt="Стрелка вправо" width="24"></a>
         </div>
       </article>
       <article class="commercial__container container-horizontal">
@@ -70,11 +70,9 @@
         <div class="commercial__content-container">
           <h2 class="commercial__title">Набор массы</h2>
           <p class="commercial__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет
-            вашему коту нарастить
-            необходимые мышцы!</p>
+            поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="commercial__link" href="catalog-hard.html" title="Перейти на страницу каталога Pro">Каталог
-            Pro</a>
+            Pro<img src="./img/icon-right-arrow-long.svg" alt="Стрелка вправо" width="24"></a>
         </div>
       </article>
     </div>
@@ -123,10 +121,10 @@
       <div class="example__summary-info">
         <span class="example__summary-text">Затраты на питание: 15 000 руб.</span>
       </div>
-      <div class="example__visualization visualization">
-        <div class="visualization__image"><img src="./img/after-mobile@1x.png"
+      <div class="example__visualization">
+        <div class="example__image"><img src="./img/after-mobile@1x.png"
             alt="Кот поле прохождения программы правильного питания" width="240" height="320"></div>
-        <div class="visualization__bar bar">
+        <div class="example__bar bar">
           <span class="bar__range-label">Было</span>
           <input class="bar__range" type="range" min="1" max="100" value="50">
           <span class="bar__range-label">Стало</span>
@@ -136,8 +134,7 @@
   </main>
   <footer class="page-footer container-horizontal">
     <a class="page-footer__logo page-footer__item"> <span class="visually-hidden">При нажатии вы перейдете в начало
-        главной
-        страницы</span>
+        главной страницы</span>
       <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="Cat energy" width="129" height="24"></a>
     <div class="page-footer__social social page-footer__item">
       <ul class="social__list">
@@ -172,11 +169,11 @@
       <a class="copyright__link-title" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML
         Academy</a>
       <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy"><img
-          src=".//img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="41"></a>
+          src="./img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="41"></a>
     </div>
   </footer>
   <script src="./js/page-header.js"></script>
-  <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
+  <script src="./js/picturefill.min.js"></script>
 </body>
 
 </html>
