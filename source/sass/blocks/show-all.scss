@@ -4,12 +4,14 @@
   align-items: center;
   padding-top: 26px;
   padding-bottom: 24px;
+
   outline: 1px solid #e6e6e6;
 
   @media screen and (min-width: $tablet-width) {
-    background-color: inherit;
     margin-bottom: 25px;
     padding-bottom: 40px;
+
+    background-color: inherit;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -34,8 +36,8 @@
 }
 
 .show-all__titel {
-  margin-bottom: 12px;
   height: 30px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: $tablet-width) {
     min-height: 80px;
@@ -61,8 +63,8 @@
   text-transform: uppercase;
 
   @media screen and (min-width: $tablet-width) {
-    line-height: 20px;
     font-size: 20px;
+    line-height: 20px;
   }
 }
 

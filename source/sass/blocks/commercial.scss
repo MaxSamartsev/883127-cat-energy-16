@@ -229,3 +229,17 @@
     line-height: 20px;
   }
 }
+
+.commercial__link img {
+  margin-bottom: 1px;
+  margin-left: 7px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 3px;
+    margin-left: 21px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 20px;
+  }
+}
