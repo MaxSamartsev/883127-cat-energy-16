@@ -1,9 +1,12 @@
 .enumeration-effects {
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 33px;
 
   @media screen and (min-width: $tablet-width) {
     margin: 0;
-    padding-top: 20px;
+    padding-top: 18px;
     padding-bottom: 23px;
 
     border-bottom: 1px solid #e6e6e6;
@@ -67,6 +70,7 @@
     padding-right: 105px;
     padding-bottom: 78px;
     padding-left: 30px;
+    min-height: 317px;
   }
 
   @media screen and (min-width: $desktop-width) {

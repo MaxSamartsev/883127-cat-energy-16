@@ -1,3 +1,7 @@
+.map {
+  position: relative;
+}
+
 .map__content {
   display: flex;
   justify-content: center;
@@ -8,19 +12,27 @@
   @media screen and (min-width: $tablet-width) {
     height: 396px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    height: 400px;
+  }
 }
 
 .map__content-no-js {
   position: relative;
-
-  display: display;
   width: 320px;
   height: 362px;
-  overflow: visible;
 
   @media screen and (min-width: $tablet-width) {
-    width: 767px;
+    width: 768px;
     height: 396px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1440px;
+    height: 400px;
+    min-height: 400px;
+    min-width: 1440px;
   }
 
   &::before {
@@ -39,7 +51,15 @@
 
     @media screen and (min-width: $tablet-width) {
       top: 146px;
-      left: 320px;
+      left: 321px;
+
+      width: 124px;
+      height: 106px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      top: 150px;
+      left: 998px;
 
       width: 124px;
       height: 106px;
@@ -49,17 +69,25 @@
 
 .map__content-image {
   position: absolute;
-  top: -37px;
-  left: 1px;
+  top: -38px;
+  left: 0;
 
   width: 320px;
   height: 400px;
 
   @media screen and (min-width: $tablet-width) {
-    top: -5px;
-    left: -1px;
+    top: -4px;
+    left: 0;
 
     width: 767px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 0;
+    left: 0;
+
+    width: 1440px;
     height: 400px;
   }
 }
