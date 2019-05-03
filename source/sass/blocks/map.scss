@@ -1,0 +1,65 @@
+.map__content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 362px;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 396px;
+  }
+}
+
+.map__content-no-js {
+  position: relative;
+
+  display: display;
+  width: 320px;
+  height: 362px;
+  overflow: visible;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 767px;
+    height: 396px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 129px;
+    z-index: 1;
+
+    width: 62px;
+    height: 53px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: $tablet-width) {
+      top: 146px;
+      left: 320px;
+
+      width: 124px;
+      height: 106px;
+    }
+  }
+}
+
+.map__content-image {
+  position: absolute;
+  top: -37px;
+  left: 1px;
+
+  width: 320px;
+  height: 400px;
+
+  @media screen and (min-width: $tablet-width) {
+    top: -5px;
+    left: -1px;
+
+    width: 767px;
+    height: 400px;
+  }
+}

@@ -44,13 +44,22 @@
     @media screen and (min-width: $desktop-width) {
       top: 22px;
       left: -110px;
+
       width: 70px;
     }
   }
 }
 
+.titel-partition--thirty-right {
+  &::before {
+    @media screen and (min-width: $desktop-width) {
+      right: -30px;
+    }
+  }
+}
+
 .titel-partition__text {
-  max-width: 205px;
+  max-width: 270px;
   margin: 0;
   padding-right: 21px;
 

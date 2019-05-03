@@ -1,6 +1,7 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
   margin-bottom: 16px;
 
   @media screen and (min-width: $tablet-width) {
@@ -17,10 +18,13 @@
 
 .page-footer__logo {
   display: block;
-  padding-top: 10px;
   padding-bottom: 29px;
 
   text-align: center;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 9px;
+  }
 }
 
 .page-footer__social {
