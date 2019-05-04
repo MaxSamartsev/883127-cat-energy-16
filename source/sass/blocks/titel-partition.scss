@@ -1,67 +1,21 @@
 .titel-partition {
   position: relative;
+  overflow: visible;
+  min-height: 30px;
+  background-image: linear-gradient(to top, transparent 0, transparent 13px, #68b738 13px, #68b738 16px, transparent 16px, transparent 100%);
 
-  display: flex;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 14px;
-    right: -20px;
-    z-index: -1;
-
-    width: 100%;
-    height: 3px;
-
-    background-color: #68b738;
-
-    @media screen and (min-width: $tablet-width) {
-      position: absolute;
-      top: 22px;
-      right: -67px;
-    }
-
-    @media screen and (min-width: $desktop-width) {
-      top: 22px;
-      right: -110px;
-    }
-  }
-
-  &::after {
-    @media screen and (min-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: -70px;
-      z-index: -1;
-
-      width: 30px;
-      height: 3px;
-
-      background-color: #68b738;
-    }
-
-    @media screen and (min-width: $desktop-width) {
-      top: 22px;
-      left: -110px;
-
-      width: 70px;
-    }
-  }
-}
-
-.titel-partition--thirty-right {
-  &::before {
-    @media screen and (min-width: $desktop-width) {
-      right: -30px;
-    }
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 38px;
   }
 }
 
 .titel-partition__text {
-  max-width: 270px;
+  display: inline;
   margin: 0;
-  padding-right: 21px;
+  padding-right: 23px;
+  padding-left: 19px;
+
 
   font-weight: normal;
   font-size: 24px;
@@ -71,10 +25,14 @@
   background-color: #ffffff;
 
   @media screen and (min-width: $tablet-width) {
-    max-width: 600px;
-    padding-right: 41px;
-
     font-size: 36px;
     line-height: 36px;
+    margin-left: 28px;
+    padding-left: 40px;
+    padding-right: 36px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 70px;
   }
 }

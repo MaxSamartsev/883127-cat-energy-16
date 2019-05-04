@@ -299,51 +299,68 @@
       <div class="additional-goods-partition titel-partition">
         <h2 class="titel-partition__text">Дополнительные товары</h2>
       </div>
+      <div class="additional-goods__container">
       <ul class="additional-goods__list">
         <li class="additional-goods__item">
+          <div class="additional-goods__item-container">
           <span class="additional-goods__item-titel">Сахарозаменитель</span>
           <div class="additional-goods__item-wrapper">
-            <span class="additional-goods__item-description">1 Упаковка (100 г)</span>
-            <span class="additional-goods__item-price">100 Р.</span>
+            <span class="additional-goods__item-description">1 упаковка (100 г)</span>
+            <span class="additional-goods__item-price">200 Р.</span>
           </div>
-          <div>
+          </div>
+          <div class="additional-goods__button-container">
             <a class="additional-goods__button button button--catalog" href="#" title="Заказать товар">Заказать</a>
+            </div>
         </li>
         <li class="additional-goods__item">
+            <div class="additional-goods__item-container">
           <span class="additional-goods__item-titel">Питьевая вода</span>
           <div class="additional-goods__item-wrapper">
             <span class="additional-goods__item-description">5 литров</span>
             <span class="additional-goods__item-price">50 Р.</span>
+            </div>
           </div>
+          <div class="additional-goods__button-container">
           <a class="additional-goods__button button button--catalog" href="#" title="Заказать товар">Заказать</a>
+          </div>
         </li>
         <li class="additional-goods__item">
+            <div class="additional-goods__item-container">
           <span class="additional-goods__item-titel">Молоко</span>
           <div class="additional-goods__item-wrapper">
             <span class="additional-goods__item-description">1 литр</span>
             <span class="additional-goods__item-price">100 Р.</span>
+            </div>
           </div>
+          <div class="additional-goods__button-container">
           <a class="additional-goods__button button button--catalog" href="#" title="Заказать товар">Заказать</a>
+          </div>
         </li>
         <li class="additional-goods__item">
+            <div class="additional-goods__item-container">
           <span class="additional-goods__item-titel">Витамины</span>
           <div class="additional-goods__item-wrapper">
             <span class="additional-goods__item-description">1 упаковка (30 г)</span>
             <span class="additional-goods__item-price">300 Р.</span>
           </div>
+          </div>
+          <div class="additional-goods__button-container">
           <a class="additional-goods__button button button--catalog" href="#" title="Заказать товар">Заказать</a>
+          </div>
         </li>
       </ul>
       <section class="additional-goods__gifts gifts">
         <h2 class="visually-hidden">Акция от магазина Кэт энерджи</h2>
-        <img class="gifts__image" src="./img/icon-gift.svg" alt="Подарок" width="55" height="60">
-        <p class="gifts__text">Закажите все и получите чехол для кота в подарок!</p>
+        <img class="gifts__image" src="./img/icon-gift.svg" alt="Подарок" width="56" height="60">
+        <p class="gifts__text">Закажите все <br>и получите чехол для<br> кота в подарок!</p>
       </section>
+    </div>
     </section>
-    <section class="map">
+    <action class="map">
       <h2 class="visually-hidden">Кэт энерджи на карте</h2>
       <section class="map__cooperation cooperation">
-        <h2 class="cooperation__titel">Приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="cooperation__titel">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
         <div class="cooperation__text-wrapper">
           <span class="cooperation__text">ул. Большая Конюшенная, д. 19/8</span>
           <span class="cooperation__text">Санкт-Петербург</span>
@@ -351,15 +368,17 @@
       </section>
       <div class="map__content" id="map">
         <div class="map__content-no-js">
-            <picture>
-                <source media="(min-width: 768px)" srcset="./img/bg-map-tablet@1x.png 1x, ./img/bg-map-tablet@2x.png 2x">
-              <img class="map__content-image" src="./img/bg-map-mobile@1x.png" srcset="./img/bg-map-mobile@2x.png 2x" alt="Карта" width="320" height="400">
-            </picture>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="./img/bg-map-desktop@1x.png 1x, ./img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/bg-map-tablet@1x.png 1x, ./img/bg-map-tablet@2x.png 2x">
+            <img class="map__content-image" src="./img/bg-map-mobile@1x.png" srcset="./img/bg-map-mobile@2x.png 2x"
+              alt="Карта" width="320" height="400">
+          </picture>
         </div>
       </div>
-    </section>
+    </action>
   </main>
-  <footer class="page-footer container-horizontal">
+  <footer class="page-footer">
     <a class="page-footer__logo page-footer__item"> <span class="visually-hidden">При нажатии вы перейдете в начало
         главной страницы</span>
       <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="Cat energy" width="130" height="24"></a>

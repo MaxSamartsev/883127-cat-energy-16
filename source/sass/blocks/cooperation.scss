@@ -87,6 +87,8 @@
 }
 
 .cooperation--no-background {
+  background-color: #ffffff;
+
   @media screen and (min-width: $tablet-width) {
     background-color: inherit;
   }

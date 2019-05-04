@@ -1,3 +1,6 @@
+var contentNoJs = document.querySelector('.map__content-no-js');
+contentNoJs.classList.add('map__content-no-js--disabled');
+
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
           center: [59.938749, 30.323266],

@@ -8,9 +8,7 @@
   @media screen and (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 42px;
     justify-content: space-around;
     padding-right: 0;
     padding-left: 0;
@@ -19,6 +17,7 @@
   @media screen and (min-width: $desktop-width) {
     padding-right: 70px;
     padding-left: 70px;
+    margin-bottom: 46px;
   }
 }
 
