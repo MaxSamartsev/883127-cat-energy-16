@@ -49,6 +49,14 @@
     font-size: 20px;
     background: inherit;
     border-bottom: 1px dashed #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #bebebe;
+    }
+
+    &:active {
+      border-bottom: transparent;
+    }
   }
 }
 
@@ -226,6 +234,14 @@
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      border: 2px solid #68b738;
+    }
   }
 }
 

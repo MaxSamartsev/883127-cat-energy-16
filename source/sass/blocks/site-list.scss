@@ -78,11 +78,17 @@
 .site-list--contrast .site-list__link-title {
   @media screen and (min-width: $desktop-width) {
     color: #ffffff;
-  }
-}
 
-.site-list--contrast .site-list__link-title::after {
-  @media screen and (min-width: $desktop-width) {
-    background-color: #ffffff;
+    &::after {
+      background-color: #ffffff;
+    }
+
+    &:hover {
+      color: #c1ddb1;
+    }
+
+    &:active {
+      color: #94c377;
+    }
   }
 }
