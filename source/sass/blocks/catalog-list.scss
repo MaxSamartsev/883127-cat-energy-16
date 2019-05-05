@@ -1,5 +1,6 @@
 .catalog-list {
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 29px;
   padding: 0;
 
   list-style: none;
@@ -7,15 +8,14 @@
   @media screen and (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: $tablet-width) {
     justify-content: space-around;
+    margin-bottom: 42px;
     padding-right: 0;
     padding-left: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-bottom: 46px;
     padding-right: 70px;
     padding-left: 70px;
   }
@@ -68,10 +68,14 @@
 
 .catalog-list__image {
   width: 50%;
+  height: 144px;
+
+  text-align: center;
 
   @media screen and (min-width: $tablet-width) {
     position: absolute;
-    bottom: 305px;
+    bottom: 303px;
+    left: 0;
 
     width: 100%;
     height: auto;
@@ -79,8 +83,8 @@
 }
 
 .catalog-list__image img {
-  display: block;
-  margin: 0 auto;
+  width: 140px;
+  height: 144px;
 
   @media screen and (min-width: $tablet-width) {
     width: 324px;

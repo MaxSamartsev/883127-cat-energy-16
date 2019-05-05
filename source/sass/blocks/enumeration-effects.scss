@@ -1,15 +1,24 @@
 .enumeration-effects {
-  margin: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 33px;
+  margin-left: 20px;
 
   @media screen and (min-width: $tablet-width) {
     margin: 0;
-    padding-top: 20px;
+    padding-top: 18px;
+    padding-bottom: 23px;
+
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-right: 40px;
     margin-left: 80px;
     padding-top: 16px;
+    padding-bottom: 0;
+
+    border-bottom: none;
   }
 }
 
@@ -17,7 +26,6 @@
   margin: 0;
 
   line-height: 54px;
-  text-align: left;
 
   @media screen and (min-width: $tablet-width) {
     margin-left: 30px;
@@ -67,6 +75,7 @@
   @media screen and (min-width: $desktop-width) {
     width: 25%;
     padding-right: 55px;
+    padding-bottom: 50px;
   }
 
   &::before {
@@ -205,6 +214,8 @@
   color: #444444;
 
   @media screen and (min-width: $tablet-width) {
+    min-height: 72px;
+
     font-size: 16px;
     line-height: 24px;
   }

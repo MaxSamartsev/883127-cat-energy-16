@@ -36,8 +36,9 @@
 
     width: 50.1%;
     height: 696px;
-    background-size: cover;
+
     background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: cover;
   }
 
   @media screen and (min-width: $desktop-width) and (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
@@ -86,10 +87,12 @@
 }
 
 .main-promo__title {
+  width: 100%;
   margin-top: 27px;
   margin-bottom: 25px;
 
   @media screen and (min-width: $tablet-width) {
+    width: 430px;
     margin-top: 20px;
   }
 }
@@ -111,8 +114,8 @@
 
   @media screen and (min-width: $tablet-width) {
     position: absolute;
-    top: 258px;
-    right: 4%;
+    top: 257px;
+    right: 3.9%;
     z-index: -1;
 
     width: 709px;
@@ -122,7 +125,7 @@
 
   @media screen and (min-width: $desktop-width) {
     top: 26px;
-    left: 39%;
+    left: 38.9%;
     z-index: 3;
 
     width: 552px;
