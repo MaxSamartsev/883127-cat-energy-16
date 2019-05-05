@@ -24,7 +24,7 @@
       </ul>
     </nav>
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html" title="Перейти на главную страницу"><span
+      <a class="page-header__logo" href="index.html" title="Перейти на главную страницу" tabindex="1"><span
           class="visually-hidden">При
           нажатии вы перейдете в начало главной страницы</span>
         <picture>
@@ -153,11 +153,11 @@
           </div>
         </div>
         <div class="visualization__scale-wrapper">
-          <label class="visualization__label visualization__label--before" for="visualization__input--before">Было</label>
+          <button class="visualization__button" type="button"><label class="visualization__label visualization__label--before" for="visualization__input--before">Было</label></button>
           <div class="visualization__scale">
             <div class="visualization__grip"></div>
           </div>
-          <label class="visualization__label visualization__label--after" for="visualization__input--after">Стало</label>
+          <button class="visualization__button" type="button"><label class="visualization__label visualization__label--after" for="visualization__input--after">Стало</label></button>
         </div>
       </div>
     </section>
