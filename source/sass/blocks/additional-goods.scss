@@ -17,8 +17,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
-    margin-left: 110px;
     margin-right: 110px;
+    margin-left: 110px;
   }
 }
 
@@ -45,10 +45,11 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 79%;
-    margin-left: 0;
-    margin-right: 40px;
     margin-top: 0;
+    margin-right: 40px;
     margin-bottom: 0;
+    margin-left: 0;
+
     border-right: 0;
     border-left: 0;
   }
@@ -134,8 +135,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 48%;
     justify-content: space-between;
+    width: 48%;
   }
 }
 
@@ -163,7 +164,6 @@
 
 .additional-goods__item-description {
   @media screen and (min-width: $desktop-width) {
-
     width: 82%;
   }
 }
@@ -184,8 +184,8 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 30.5%;
-    padding-left: 27px;
     padding-bottom: 2px;
+    padding-left: 27px;
   }
 }
 
@@ -213,10 +213,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-right: 0;
-    margin-left: 40px;
-    margin-top: 0;
-    margin-bottom: 0;
     width: 21%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 40px;
   }
 }

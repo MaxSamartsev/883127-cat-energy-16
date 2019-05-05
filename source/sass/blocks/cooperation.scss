@@ -1,46 +1,51 @@
 .cooperation {
-  padding-left: 20px;
-  padding-right: 20px;
   display: flex;
-  padding-top: 28px;
-  padding-bottom: 26px;
   min-height: 113px;
+  padding-top: 28px;
+  padding-right: 20px;
+  padding-bottom: 26px;
+  padding-left: 20px;
+
   background-color: #f2f2f2;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 65px;
-    padding-left: 70px;
-    padding-right: 70px;
     justify-content: space-between;
+    padding-top: 65px;
+    padding-right: 70px;
     padding-bottom: 40px;
+    padding-left: 70px;
   }
 
   @media screen and (min-width: $desktop-width) {
     top: 95px;
-    min-height: 201px;
+
     min-width: 569px;
-    background-color: #ffffff;
+    min-height: 201px;
     padding-left: 75px;
+
+    background-color: #ffffff;
   }
 }
 
 .cooperation__titel {
+  width: 50%;
   margin: 0;
+  padding-right: 10px;
+
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  color: #111111;
   text-align: left;
+  color: #111111;
   text-transform: uppercase;
-  width: 50%;
-  padding-right: 10px;
 
   @media screen and (min-width: $tablet-width) {
-    text-align: left;
     width: 160px;
+
     font-size: 20px;
     line-height: 25px;
+    text-align: left;
   }
 }
 
@@ -48,35 +53,37 @@
   width: 50%;
 
   @media screen and (min-width: $tablet-width) {
-    width: 155px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 155px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 175px;
     align-items: flex-start;
+    width: 175px;
   }
 }
 
 .cooperation__text {
+  width: 100%;
   margin: 0;
+
   font-style: normal;
   font-weight: normal;
-  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  font-family: "Arial", sans-serif;
   text-align: left;
-  width: 100%;
+  color: #444444;
 
   @media screen and (min-width: $tablet-width) {
     display: inline;
-    text-align: right;
+    padding-bottom: 18px;
+
     font-size: 16px;
     line-height: 20px;
-    padding-bottom: 18px;
+    text-align: right;
   }
 
   @media screen and (min-width: $desktop-width) {

@@ -29,7 +29,10 @@
 
 .visualization__label {
   width: 50px;
-  padding: 0;
+  padding-top: 2px;
+  padding-right: 0;
+  padding-bottom: 2px;
+  padding-left: 0;
 
   font-style: normal;
   font-weight: normal;
@@ -45,8 +48,10 @@
 
   @media screen and (min-width: $tablet-width) {
     height: 34px;
-    padding-top: 6px;
+    padding-top: 3px;
+
     font-size: 20px;
+
     background: inherit;
     border-bottom: 1px dashed #bebebe;
 
@@ -65,13 +70,13 @@
 
   width: 320px;
   height: 250px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   overflow: hidden;
 
   @media screen and (min-width: $tablet-width) {
     width: 610px;
     height: 517px;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     overflow: visible;
   }
 
@@ -149,7 +154,7 @@
 .visualization__label--before::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 9px;
   left: 122px;
 
   width: 35px;
@@ -165,7 +170,7 @@
 .visualization__label--after::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 9px;
   left: 160px;
 
   width: 35px;
@@ -178,10 +183,6 @@
   }
 }
 
-.visualization__label--active::before {
-  background-color: #68b738;
-}
-
 .visualization__scale-wrapper {
   position: relative;
 
@@ -192,7 +193,8 @@
 
   @media screen and (min-width: $tablet-width) {
     z-index: 2;
-    margin-right: 3px;
+
+    margin-right: 4px;
     margin-left: 0;
   }
 }
@@ -200,8 +202,8 @@
 .visualization__scale {
   width: 83px;
   height: 14px;
-  margin-right: 12px;
-  margin-left: 11px;
+  margin-right: 13px;
+  margin-left: 12px;
 
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
@@ -212,7 +214,7 @@
     align-items: center;
     width: 428px;
     height: 6px;
-    margin-right: 22px;
+    margin-right: 20px;
     margin-left: 22px;
 
     background-color: #dcdcdc;
@@ -245,8 +247,15 @@
   }
 }
 
+.visualization__wrapper--after .visualization__label--after::before {
+  background-color: #68b738;
+}
 
-.visualization__input--after:checked ~ .visualization__image--before {
+.visualization__wrapper--before .visualization__label--before::before {
+  background-color: #68b738;
+}
+
+.visualization__wrapper--after .visualization__image--before {
   left: -320px;
 
   @media screen and (min-width: $tablet-width) {
@@ -258,7 +267,7 @@
   }
 }
 
-.visualization__input--after:checked ~ .visualization__image--after {
+.visualization__wrapper--after .visualization__image--after {
   right: -1px;
 
   @media screen and (min-width: $tablet-width) {
@@ -268,10 +277,4 @@
   @media screen and (min-width: $desktop-width) {
     right: -20px;
   }
-}
-
-.visualization__button {
-  border: 0;
-  background-color: inherit;
-  padding: 0;
 }

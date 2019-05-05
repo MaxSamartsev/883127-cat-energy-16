@@ -114,54 +114,54 @@
             <div class="example__stat-item">
               <span class="example__stat-data">5 кг</span>
               <div class="example__stat-label-wrapper">
-              <span class="example__stat-label">снижение <br> веса</span>
-                </div>
+                <span class="example__stat-label">снижение <br> веса</span>
+              </div>
             </div>
             <div class="example__stat-item">
               <span class="example__stat-data">60 дней</span>
               <div class="example__stat-label-wrapper">
-              <span class="example__stat-label">затрачено <br> времени</span>
-            </div>
+                <span class="example__stat-label">затрачено <br> времени</span>
+              </div>
             </div>
           </div>
           <div class="example__summary-info">
             <span class="example__summary-text">Затраты на питание:</span>
-            <span class="example__summary-text"> &nbsp 15 000 руб.</span>
+            <span class="example__summary-text">&nbsp; 15 000 руб.</span>
           </div>
         </div>
       </div>
       <div class="example__visualization visualization">
         <div class="visualization__wrapper">
-        <div class="visualization__image-wrapper">
-            <input class="visualization__input visualization__input--before" type="radio" name="visualization"
-            id="visualization__input--before" checked>
-          <input class="visualization__input visualization__input--after" type="radio" name="visualization"
-            id="visualization__input--after">
-          <div class="visualization__image visualization__image--before">
-            <picture>
-                <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png 1x, ./img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, ./img/before-tablet@2x.png 2x">
-              <img src="../img/before-mobile@1x.png" alt="Толстый кот" srcset="../img/before-mobile@2x.png 2x">
-            </picture>
-          </div>
-          <div class="visualization__image visualization__image--after">
+          <div class="visualization__image-wrapper">
+            <div class="visualization__image visualization__image--before">
               <picture>
-                  <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, ./img/after-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, ./img/after-tablet@2x.png 2x">
-                  <img src="./img/after-mobile@1x.png" alt="Толстый кот" srcset="./img/after-mobile@2x.png 2x">
-                </picture>
+                <source media="(min-width: 1300px)"
+                  srcset="./img/before-desktop@1x.png 1x, ./img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/before-tablet@1x.png 1x, ./img/before-tablet@2x.png 2x">
+                <img src="../img/before-mobile@1x.png" alt="Толстый кот" srcset="../img/before-mobile@2x.png 2x">
+              </picture>
+            </div>
+            <div class="visualization__image visualization__image--after">
+              <picture>
+                <source media="(min-width: 1300px)"
+                  srcset="./img/after-desktop@1x.png 1x, ./img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, ./img/after-tablet@2x.png 2x">
+                <img src="./img/after-mobile@1x.png" alt="Толстый кот" srcset="./img/after-mobile@2x.png 2x">
+              </picture>
+            </div>
           </div>
-        </div>
-        <div class="visualization__scale-wrapper">
-          <button class="visualization__button" type="button"><label class="visualization__label visualization__label--before" for="visualization__input--before">Было</label></button>
-          <div class="visualization__scale">
-            <div class="visualization__grip"></div>
+          <div class="visualization__scale-wrapper">
+            <button class="visualization__label visualization__label--before">Было</button>
+            <div class="visualization__scale">
+              <div class="visualization__grip"></div>
+            </div>
+            <button class="visualization__label visualization__label--after">Стало</button>
           </div>
-          <button class="visualization__button" type="button"><label class="visualization__label visualization__label--after" for="visualization__input--after">Стало</label></button>
         </div>
       </div>
     </section>
-    <action class="map">
+    <section class="map">
       <h2 class="visually-hidden">Кэт энерджи на карте</h2>
       <section class="map__cooperation cooperation cooperation--no-background">
         <h2 class="cooperation__titel">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
@@ -180,7 +180,7 @@
           </picture>
         </div>
       </div>
-    </action>
+    </section>
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo page-footer__item"> <span class="visually-hidden">При нажатии вы перейдете в начало
