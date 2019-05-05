@@ -18,4 +18,3 @@ labelBefore.addEventListener('click', function () {
     visualBlock.classList.add('visualization__wrapper--before');
   }
 });
-
