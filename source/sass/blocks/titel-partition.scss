@@ -2,16 +2,15 @@
   position: relative;
   overflow: visible;
   min-height: 30px;
-  background-image: linear-gradient(to top, transparent 0, transparent 13px, #68b738 13px, #68b738 16px, transparent 16px, transparent 100%);
+  background-image: linear-gradient(to bottom, transparent 0, transparent 14px, #68b738 14px, #68b738 17px, transparent 17px, transparent 100%);
 
   @media screen and (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 38px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, #68b738 22px, #68b738 25px, transparent 25px, transparent 100%);
   }
 }
 
 .titel-partition__text {
-  display: inline;
+  display: inline-block;
   margin: 0;
   padding-right: 23px;
   padding-left: 19px;
@@ -34,5 +33,11 @@
 
   @media screen and (min-width: $desktop-width) {
     margin-left: 70px;
+  }
+}
+
+.titel-partition__text br {
+  @media screen and (min-width: $tablet-width) {
+    display: none;
   }
 }

@@ -17,9 +17,6 @@
 
   @media screen and (min-width: $desktop-width) {
     top: 95px;
-    left: 7.7%;
-    position: absolute;
-    z-index: 1;
     min-height: 201px;
     min-width: 569px;
     background-color: #ffffff;
@@ -72,6 +69,7 @@
   line-height: 18px;
   color: #444444;
   text-align: left;
+  width: 100%;
 
   @media screen and (min-width: $tablet-width) {
     display: inline;
@@ -94,6 +92,6 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
   }
 }
