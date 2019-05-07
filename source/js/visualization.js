@@ -1,87 +1,60 @@
-
 var tabletWidth = 768;
-var LAPTOP_WIDTH = 1024;
-var visual = document.querySelector(".visualization__wrapper");
-var btnBefore = visual.querySelector(".visualization__label--before");
-var btnlAfter = visual.querySelector(".visualization__label--after");
+var visual = document.querySelector(".visualization");
+var visualBlock = visual.querySelector(".visualization__wrapper");
+var btnBefore = document.querySelector(".visualization__label--before");
+var btnAfter = document.querySelector(".visualization__label--after");
 var scale = visual.querySelector(".visualization__scale");
 var grip = visual.querySelector(".visualization__grip");
 var imageBefore = visual.querySelector(".visualization__image--before");
 var imageAfter = visual.querySelector(".visualization__image--after");
+var windowSize = window.screen.width;
 var scaleWidth;
 var gripWidth;
-var sliderWidth;
-
-visual.classList.add('visualization__wrapper--before');
-
-btnlAfter.addEventListener('click', function () {
-  if (visual.classList.contains('visualization__wrapper--before')) {
-    visual.classList.remove('visualization__wrapper--before');
-    visual.classList.add('visualization__wrapper--after');
-  }
-});
-
-btnBefore.addEventListener('click', function () {
-  if (visual.classList.contains('visualization__wrapper--after')) {
-    visual.classList.remove('visualization__wrapper--after');
-    visual.classList.add('visualization__wrapper--before');
-  }
-});
-
-//////////
-
-
-(function () {
 
   var getElemWidth = function (elem) {
     return parseInt(getComputedStyle(elem).width, 10);
   };
 
   btnBefore.onclick = function (evt) {
-    evt.preventDefault();
-    before.style.width = "100%";
-    after.style.width = "0";
-    grip.style.marginLeft = "0";
-    grip.style.transition = "margin-left 2.5s ease-in-out";
-    before.style.transition = "width 2s ease-in-out";
-
-    if (viewport>=LAPTOP_WIDTH) {
-      grip.style.transition = "margin-left 3s ease-in-out";
-      before.style.transition = "width 3s ease-in-out";
+    console.log(windowSize)
+    if (windowSize < tabletWidth) {
+    imageAfter.style.right = "";
+    imageBefore.style.left = "";
+    visualBlock.classList.remove('visualization__wrapper--after');
+    visualBlock.classList.add('visualization__wrapper--before');
     }
     else {
-      grip.style.transition = "margin-left 3s ease-in-out";
-      before.style.transition = "width 1.5s ease-in-out";
+    evt.preventDefault();
+    imageAfter.style.width = "0";
+    grip.style.marginLeft = "0";
     }
   };
 
   btnAfter.onclick = function (evt) {
     evt.preventDefault();
-    before.style.width = "0";
-    after.style.width = "100%";
-    grip.style.marginLeft = "calc(100% - " + gripWidth + "px)";
-    grip.style.transition = "margin-left 2.5s ease-in-out";
-    after.style.transition = "width 2s ease-in-out";
+    if (windowSize < tabletWidth) {
+    imageAfter.style.right = (0)+'px';
+    imageBefore.style.left = (-320)+'px';
+    visualBlock.classList.remove('visualization__wrapper--before');
+    visualBlock.classList.add('visualization__wrapper--after');
 
-    if (viewport>=LAPTOP_WIDTH) {
-      grip.style.transition = "margin-left 3s ease-in-out";
-      after.style.transition = "width 3s ease-in-out";
     }
     else {
-      grip.style.transition = "margin-left 1s ease-in-out";
-      after.style.transition = "width 1.5s ease-in-out";
+    imageAfter.style.width = "100%";
+    grip.style.marginLeft = "calc(100% - " + gripWidth + "px)";
+    imageAfter.style.transition = "width 0.1s ease-in-out";
     }
   };
 
   grip.ondblclick = function () {
-    before.style.width = "50%";
-    after.style.width = "50%";
+    imageBefore.style.width = "50%";
+    imageAfter.style.width = "50%";
     grip.style.marginLeft = "calc(50% - " + gripWidth / 2 + "px)";
   };
 
   var getCoords = function (elem) {
     var box = elem.getBoundingClientRect();
-    return box.left + pageXOffset;
+    return box.left + pageXOffset + 200 ;
   };
 
   var gripDownHandler = function (evtDown) {
@@ -92,6 +65,8 @@ btnBefore.addEventListener('click', function () {
     var shiftX = evtDown.pageX - gripCoords;
 
     document.onmousemove = function (evtMove) {
+      imageAfter.style.transition = "none";
+
       var newLeft = evtMove.pageX - shiftX - scaleCoords;
 
       if (newLeft < 0) {
@@ -106,8 +81,7 @@ btnBefore.addEventListener('click', function () {
       var gripValue = newLeft / rightEdge * 100;
       grip.style.marginLeft = newLeft + "px";
 
-      before.style.width = (100 - gripValue) + "%";
-      after.style.width = gripValue + "%";
+      imageAfter.style.width = gripValue + "%";
     };
 
     document.onmouseup = function () {
@@ -126,25 +100,33 @@ btnBefore.addEventListener('click', function () {
     grip.removeEventListener("mousedown", gripDownHandler);
   };
 
+  var start = function() {
+    windowSize = window.screen.width;
 
-  var initialize = function() {
-    var viewport = document.documentElement.clientWidth || window.innerWidth;
-
-    if (viewport >= tabletWidth) {
-      addGripHandlers();
-    } else {
-      removeGripHandlers();
-    }
-
-    sliderWidth = getElemWidth(visual);
     scaleWidth = getElemWidth(scale);
     gripWidth = getElemWidth(grip);
 
-    // before.style.width = "";
-    // after.style.width = "";
-    // grip.style.marginLeft = "";
+    imageBefore.style.width = "";
+    imageAfter.style.width = "";
+    imageAfter.style.right = "";
+    imageBefore.style.left = "";
+    grip.style.marginLeft = "";
+    imageAfter.style.transition = "";
+    imageBefore.style.transition = "";
+    visualBlock.classList.remove('visualization__wrapper--before');
+    visualBlock.classList.remove('visualization__wrapper--after');
+
+    if (windowSize >= tabletWidth) {
+      addGripHandlers();
+    } else {
+      removeGripHandlers();
+      visualBlock.classList.add('visualization__wrapper--before');
+      imageAfter.style.transition = "right 0.5s ease-out";
+      imageBefore.style.transition = "left 0.5s ease-out";
+    }
+
   };
 
-  window.addEventListener("load", initialize);
-  window.addEventListener("resize", initialize);
-})();
+  window.addEventListener("load", start);
+  window.addEventListener("resize", start);
+

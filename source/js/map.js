@@ -80,5 +80,5 @@ ymaps.ready(function () {
 
   addPlacemark();
 
-  window.addEventListener("resize", timeout(replacementPlacemark, 1000));
+  window.addEventListener("resize", timeout(replacementPlacemark, 500));
 });
