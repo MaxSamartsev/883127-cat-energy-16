@@ -128,5 +128,3 @@ var start = function () {
 
 window.addEventListener("load", start);
 window.addEventListener("resize", start);
-
-
