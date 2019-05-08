@@ -29,8 +29,8 @@ ymaps.ready(function () {
         iconImageHref: './img/map-pin.png',
         iconImageSize: miniIcon,
         iconImageOffset: miniOffset,
-      })
-  myMap.geoObjects.add(miniPlacemark)
+      });
+  myMap.geoObjects.add(miniPlacemark);
 
   bigPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     hintContent: 'Офис Кэт энерджи',
@@ -39,7 +39,7 @@ ymaps.ready(function () {
       iconImageHref: './img/map-pin.png',
       iconImageSize: bigIcon,
       iconImageOffset: bigOffset,
-    })
+    });
 
   var timeout = function (f, ms) {
     var timer = null;
@@ -58,12 +58,10 @@ ymaps.ready(function () {
   addPlacemark = function () {
     if (window.screen.width < tabletWidth) {
       myMap.geoObjects.add(miniPlacemark);
+      myMap.setCenter(centerMobile, 17);
     }
     else (myMap.geoObjects.add(bigPlacemark));
 
-    if (window.screen.width < tabletWidth) {
-      myMap.setCenter(centerMobile, 17);
-    }
     if (window.screen.width >= tabletWidth && window.screen.width < desktopWidth) {
       myMap.setCenter(centerTablet, 17);
     }

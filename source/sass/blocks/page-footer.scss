@@ -2,18 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-bottom: 16px;
-  padding-left: 20px;
 
   background-color: #f2f2f2;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 55px;
     padding-right: 30px;
-    padding-bottom: 41px;
+    padding-bottom: 53px;
     padding-left: 30px;
   }
 
@@ -24,16 +21,11 @@
 }
 
 .page-footer__logo {
-  display: block;
-  padding-bottom: 29px;
-
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 6px;
-    padding-bottom: 0;
-
-    text-align: left;
+    justify-content: left;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -41,28 +33,41 @@
   }
 }
 
-.page-footer__logo img {
-  width: 130px;
-  height: 24px;
+.page-footer__logo-image {
+  margin-top: 37px;
+  margin-bottom: 29px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 130px;
+    height: 25px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 129px;
+    height: 27px;
+    padding-bottom: 3px;
+  }
 }
 
 .page-footer__social {
-  padding-top: 22px;
-  padding-bottom: 19px;
+  padding-top: 18px;
+  padding-bottom: 14px;
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
-  @media screen and (min-width: $desktop-width) {
-    padding-top: 20px;
+  @media screen and (min-width: $tablet-width) {
+    padding: 0;
   }
 }
 
 .page-footer__copyright {
   padding-top: 19px;
+  padding-bottom: 19px;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 6px;
+    padding: 0;
   }
 }
 
@@ -74,4 +79,32 @@
 
     border: none;
   }
+}
+
+.copyright__icon-image {
+  fill: #444444;
+}
+
+.copyright__link:hover .copyright__icon-image {
+  fill: #68b738;
+}
+
+.copyright__link:active .copyright__icon-image {
+  fill: #c8e0ba;
+}
+
+.copyright__link:hover .copyright__link-title {
+  color: #444444;
+}
+
+.copyright__link:active .copyright__link-title {
+  color: #c8c8c8;
+}
+
+.page-footer__logo-link:hover .page-footer__logo-image {
+  fill: #3e3e3e;
+}
+
+.page-footer__logo-link:active .page-footer__logo-image {
+  fill: #6b6b6b;
 }

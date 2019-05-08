@@ -30,7 +30,7 @@
   }
 }
 
-.map__content-no-js {
+.map__raster {
   position: relative;
 
   width: 320px;
@@ -47,38 +47,34 @@
     height: 400px;
     min-height: 400px;
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 140px;
-    left: 129px;
-    z-index: 1;
+.map__pin img {
+  position: absolute;
+  top: 140px;
+  left: 129px;
+  z-index: 1;
 
-    width: 62px;
-    height: 53px;
+  width: 62px;
+  height: 53px;
 
-    background-image: url("../img/map-pin.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  @media screen and (min-width: $tablet-width) {
+    top: 146px;
+    left: 321px;
 
-    @media screen and (min-width: $tablet-width) {
-      top: 146px;
-      left: 321px;
+    width: 124px;
+    height: 106px;
+  }
 
-      width: 124px;
-      height: 106px;
-    }
+  @media screen and (min-width: $desktop-width) {
+    top: 150px;
+    left: 998px;
 
-    @media screen and (min-width: $desktop-width) {
-      top: 150px;
-      left: 998px;
-
-      width: 124px;
-      height: 106px;
-    }
+    width: 124px;
+    height: 106px;
   }
 }
+
 
 .map__content-no-js--disabled {
   display: none;
