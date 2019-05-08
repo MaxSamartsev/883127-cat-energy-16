@@ -147,58 +147,80 @@
       </section>
       <div class="map__content" id="map">
         <div class="map__content-no-js">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="./img/bg-map-desktop@1x.png 1x, ./img/bg-map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="./img/bg-map-tablet@1x.png 1x, ./img/bg-map-tablet@2x.png 2x">
-            <img class="map__content-image" src="./img/bg-map-mobile@1x.png" srcset="./img/bg-map-mobile@2x.png 2x"
-              alt="Карта" width="320" height="400">
-          </picture>
+          <div class="map__raster">
+            <div class="map__pin">
+              <picture>
+                <source type="image/webp" srcset="./img/map-pin.webp">
+                <img src="./img/map-pin.png" alt="Кет энерджи на карте" width="62" height="53">
+              </picture>
+            </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)"
+                srcset="./img/bg-map-desktop@1x.webp 1x, ./img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/bg-map-tablet@1x.webp 1x, ./img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/bg-map-mobile@1x.webp 1x, ./img/bg-map-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)"
+                srcset="./img/bg-map-desktop@1x.png 1x, ./img/bg-map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/bg-map-tablet@1x.png 1x, ./img/bg-map-tablet@2x.png 2x">
+              <img class="map__content-image" src="./img/bg-map-mobile@1x.png" srcset="./img/bg-map-mobile@2x.png 2x"
+                alt="Карта" width="320" height="400">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo page-footer__item"> <span class="visually-hidden">При нажатии вы перейдете в начало
-        главной страницы</span>
-      <img class="page-footer__logo-image" src="./img/logo-footer.svg" alt="Cat energy" width="130" height="24"></a>
+    <div class="page-footer__logo page-footer__item">
+      <a class="page-footer__logo-link" href="./index.html" title="При нажатии вы перейдете в начало
+        главной страницы"> <span class="visually-hidden">При нажатии вы перейдете в начало главной страницы</span>
+        <svg class="page-footer__logo-image" width="129" height="23">
+          <use xlink:href="./img/sprite.svg#logo-footer"></use>
+        </svg>
+      </a>
+    </div>
     <div class="page-footer__social social page-footer__item">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#" title="Мы в контакте"><span
               class="visually-hidden">Мы в контакте</span>
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/icon-vk.svg"><img src="./img/icon-vk-mobile.svg"
-                alt="В контакте" width="22" height="12"></picture>
+            <svg class="social__icon-image" width="22" height="12">
+              <use xlink:href="./img/sprite.svg#icon-vk"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--instagram" href="#" title="Мы в Инстаграме"><span
               class="visually-hidden">Мы в Инстаграме</span>
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/icon-insta.svg"><img src="
-                    ./img/icon-insta-mobile.svg" alt="Инстаграм" width="16" height="16">
-            </picture>
+            <svg class="social__icon-image" width="16" height="16">
+              <use xlink:href="./img/sprite.svg#icon-insta"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#" title="Мы в Фейсбуке"><span class="visually-hidden">Мы
               в Фейсбуке</span>
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/icon-fb.svg"><img src="./img/icon-fb-mobile.svg"
-                alt="Фейсбук" width="10" height="19"></picture>
+            <svg class="social__icon-image" width="19" height="19">
+              <use xlink:href="./img/sprite.svg#icon-fb"></use>
+            </svg>
           </a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright page-footer__item">
-      <a class="copyright__link-title" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML
-        Academy</a>
-      <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy"><img
-          src="./img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="41"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">
+        <span class="copyright__link-title">HTML Academy</span>
+        <svg class="copyright__icon-image" width="34" height="41">
+          <use xlink:href="./img/sprite.svg#htmlacademy"></use>
+        </svg>
+      </a>
     </div>
   </footer>
   <script src="./js/page-header.js"></script>
   <script src="./js/picturefill.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6e1179f4-f528-4415-832a-aa0f989b416c"></script>
+  <script src="./js/map.js"></script>
 </body>
 
 </html>

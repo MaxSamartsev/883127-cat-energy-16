@@ -229,11 +229,17 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  &:active {
+    color: #b7b7b7;
+  }
 }
 
-.commercial__link img {
+.commercial__link-image {
   margin-bottom: 1px;
   margin-left: 10px;
+
+  fill: #3f4242;
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 3px;
@@ -243,4 +249,8 @@
   @media screen and (min-width: $desktop-width) {
     margin-left: 20px;
   }
+}
+
+.commercial__link:active .commercial__link-image {
+  fill: #3f4242;
 }
