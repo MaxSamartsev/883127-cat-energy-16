@@ -49,6 +49,8 @@
 }
 
 .form__input-wrapper {
+  position: relative;
+
   display: flex;
   align-items: center;
   margin-top: 0;
@@ -95,7 +97,7 @@
   width: 100%;
   margin-left: 14px;
   padding-top: 12px;
-  padding-right: 15px;
+  padding-right: 40px;
   padding-bottom: 13px;
   padding-left: 15px;
 
@@ -130,6 +132,33 @@
 
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.form__contact-icon-image {
+  position: absolute;
+  right: 16px;
+
+  fill: #444444;
+
+  @media screen and (min-width: $tablet-width) {
+    right: 20px;
+  }
+}
+
+.form__input-data:focus ~ .form__contact-icon-image {
+  fill: #68b738;
+}
+
+.form__input-data:focus:invalid ~ .form__contact-icon-image {
+  fill: #ff8282;
+}
+
+.form__contact-icon-image--phone {
+  right: 13px;
+
+  @media screen and (min-width: $tablet-width) {
+    right: 17px;
   }
 }
 
