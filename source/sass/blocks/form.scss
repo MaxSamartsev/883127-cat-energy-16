@@ -142,6 +142,7 @@
   fill: #444444;
 
   @media screen and (min-width: $tablet-width) {
+    top: 19px;
     right: 20px;
   }
 }
@@ -156,9 +157,10 @@
 
 .form__contact-icon-image--phone {
   right: 13px;
+  top: 16px;
 
   @media screen and (min-width: $tablet-width) {
-    right: 17px;
+    right: 19px;
   }
 }
 

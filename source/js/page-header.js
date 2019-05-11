@@ -1,4 +1,3 @@
-
 var pageHeader = document.querySelector('.page-header');
 var navButton = document.querySelector('.page-header__nav-button');
 
