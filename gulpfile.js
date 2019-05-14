@@ -13,6 +13,8 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
+var jsmin = require('gulp-jsmin');
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -36,6 +38,19 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("htmlmin", function () {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("jsmin", async function () {
+  gulp.src(["source/js/*.js", "!source/js/*min.js"])
+    .pipe(jsmin())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("images", function () {
   return gulp.src(['source/img/**/*.{png,jpg,svg}', '!source/img/sprite.svg'])
     .pipe(imagemin([
@@ -51,18 +66,8 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/*",
     "!source/img/source-sprite",
-    "source/js/*.min.js",
     "source/*.ico",
-    "source/*.html"
-  ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-});
-
-gulp.task("copyhtml", function () {
-  return gulp.src([
-    "source/*.html"
+    "source/js/*.min.js"
   ], {
       base: "source"
     })
@@ -76,7 +81,7 @@ gulp.task("clean", function () {
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img/"));
+    .pipe(gulp.dest("source/img/webp"));
 });
 
 gulp.task("sprite", function () {
@@ -98,7 +103,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("copyhtml", "refresh"));
+  gulp.watch("source/*.html", gulp.series("htmlmin", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("jsmin", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -109,7 +115,9 @@ gulp.task("refresh", function (done) {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
+  "htmlmin",
   "css",
+  "jsmin"
 ));
 
 gulp.task("start", gulp.series("build", "server"));
