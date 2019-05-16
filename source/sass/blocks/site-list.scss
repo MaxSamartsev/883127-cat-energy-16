@@ -8,15 +8,16 @@
   border-bottom: 1px solid #e6e6e6;
 
   @media screen and (min-width: $tablet-width) {
+    margin-bottom: 4px;
+    margin-left: 35px;
     padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 35px;
+    padding-bottom: 14px;
 
     border-bottom: none;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-left: 34px;
+    margin-left: 34px;
   }
 }
 

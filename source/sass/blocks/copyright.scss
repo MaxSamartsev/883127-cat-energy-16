@@ -24,8 +24,30 @@
   font-family: "Arial", sans-serif;
   color: #444444;
   letter-spacing: -0.2px;
+  pointer-events: none;
 
   @media screen and (min-width: $tablet-width) {
     margin-right: 17px;
   }
+}
+
+.copyright__icon-image {
+  pointer-events: none;
+  fill: #444444;
+}
+
+.copyright__link:hover .copyright__icon-image {
+  fill: #68b738;
+}
+
+.copyright__link:active .copyright__icon-image {
+  fill: #c8e0ba;
+}
+
+.copyright__link:hover .copyright__link-title {
+  color: #444444;
+}
+
+.copyright__link:active .copyright__link-title {
+  color: #c8c8c8;
 }

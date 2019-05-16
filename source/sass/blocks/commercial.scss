@@ -20,7 +20,7 @@
   margin-bottom: 20px;
   padding-top: 30px;
   padding-right: 20px;
-  padding-bottom: 21px;
+  padding-bottom: 19px;
   padding-left: 20px;
 
   background-color: #f2f2f2;
@@ -39,7 +39,7 @@
   @media screen and (min-width: $desktop-width) {
     display: block;
     width: 50%;
-    padding-bottom: 61px;
+    padding-bottom: 58px;
     padding-left: 0;
   }
 }
@@ -47,9 +47,11 @@
 .commercial__content-container {
   @media screen and (min-width: $tablet-width) {
     padding-right: 50px;
+    padding-bottom: 37px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    padding-bottom: 0;
     padding-left: 53px;
   }
 }
@@ -200,7 +202,7 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
     padding-bottom: 0;
 
     font-size: 16px;
@@ -210,12 +212,15 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-bottom: 6px;
+    min-height: 50px;
+    margin-bottom: 29px;
   }
 }
 
 .commercial__link {
   position: relative;
+  z-index: 2;
+
   margin-bottom: 20px;
 }
 
@@ -227,17 +232,19 @@
 
   font-weight: normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 20px;
   color: #111111;
   text-transform: uppercase;
 
   background-color: #f2f2f2;
 
+  pointer-events: none;
+
   @media screen and (min-width: $tablet-width) {
     padding-right: 24px;
 
     font-size: 20px;
-    line-height: 20px;
+    line-height: 26px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -252,6 +259,8 @@
   z-index: 0;
 
   transition: 0.1s;
+
+  pointer-events: none;
 
   fill: #3f4242;
 

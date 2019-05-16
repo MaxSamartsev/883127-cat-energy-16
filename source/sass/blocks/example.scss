@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 36px;
+  padding-bottom: 34px;
   overflow: hidden;
 
   background-color: #f2f2f2;
@@ -185,7 +185,7 @@
     background-color: #ffffff;
   }
 
-  @media screen and (min-width: $tablet-width) {
+  @media screen and (min-width: $desktop-width) {
     background-color: #f2f2f2;
   }
 }
