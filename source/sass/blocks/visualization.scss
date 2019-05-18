@@ -261,12 +261,18 @@
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    outline: none;
 
     &:hover {
       box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15);
     }
 
     &:active {
+      border: 2px solid #68b738;
+    }
+
+    &:focus {
+      box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15);
       border: 2px solid #68b738;
     }
   }
