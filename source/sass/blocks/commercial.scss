@@ -212,7 +212,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    min-height: 50px;
+    min-height: 72px;
     margin-bottom: 29px;
   }
 }
@@ -220,6 +220,7 @@
 .commercial__link {
   position: relative;
   z-index: 2;
+
   margin-bottom: 20px;
 }
 

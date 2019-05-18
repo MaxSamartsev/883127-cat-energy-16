@@ -157,10 +157,11 @@
 
 .form__contact-icon-image--phone {
   right: 13px;
-  top: 16px;
+  top: 12px;
 
   @media screen and (min-width: $tablet-width) {
-    right: 19px;
+    right: 17px;
+    top: 16px;
   }
 }
 
