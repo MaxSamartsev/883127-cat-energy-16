@@ -6,7 +6,9 @@
   <title>Интернет магазин полезной еды для котов: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,12 +26,13 @@
       </ul>
     </nav>
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html" title="Перейти на главную страницу" tabindex="1"><span
+      <a class="page-header__logo" href="index.html" title="Перейти на главную страницу" tabindex="0"><span
           class="visually-hidden">При нажатии вы перейдете в начало главной страницы</span>
         <picture>
           <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-          <img src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="191" height="40">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="191"
+            height="40">
         </picture>
       </a>
       <button class="page-header__nav-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -59,31 +62,38 @@
       </div>
     </section>
     <div class="commercial">
-      <article class="commercial__container container-horizontal">
-        <div class="commercial__image commercial__image--cat-slim"></div>
-        <div class="commercial__content-container">
-          <h2 class="commercial__title">Похудение</h2>
-          <p class="commercial__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
-            на
-            диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="commercial__link" href="catalog-slim.html" title="Перейти на страницу каталога Slim">Каталог
-            Slim
-            <svg class="commercial__link-image" width="24" height="11"> <use xlink:href="./img/sprite.svg#icon-right-arrow-long"></use></svg>
-          </a>
-        </div>
-      </article>
-      <article class="commercial__container container-horizontal">
-        <div class="commercial__image commercial__image--cat-pro"></div>
-        <div class="commercial__content-container">
-          <h2 class="commercial__title">Набор массы</h2>
-          <p class="commercial__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="commercial__link" href="catalog-hard.html" title="Перейти на страницу каталога Pro">Каталог
-            Pro
-            <svg class="commercial__link-image" width="24" height="11"> <use xlink:href="./img/sprite.svg#icon-right-arrow-long"></use></svg>
+      <div class="commercial__container-wrapper">
+        <article class="commercial__container">
+          <div class="commercial__image commercial__image--cat-slim"></div>
+          <div class="commercial__content-container">
+            <h2 class="commercial__title">Похудение</h2>
+            <p class="commercial__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
+              на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="commercial__link" href="catalog-slim.html" title="Перейти на страницу каталога Slim">
+              <span class="commercial__link-titel">Каталог Slim</span>
+              <svg class="commercial__link-image" width="32" height="11">
+                <use xlink:href="./img/sprite.svg#icon-right-arrow-verylong"></use>
+              </svg>
             </a>
-        </div>
-      </article>
+          </div>
+        </article>
+      </div>
+      <div class="commercial__container-wrapper">
+        <article class="commercial__container">
+          <div class="commercial__image commercial__image--cat-pro"></div>
+          <div class="commercial__content-container">
+            <h2 class="commercial__title">Набор массы</h2>
+            <p class="commercial__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+              поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="commercial__link" href="catalog-hard.html" title="Перейти на страницу каталога Pro">
+              <span class="commercial__link-titel">Каталог Pro</span>
+              <svg class="commercial__link-image" width="32" height="11">
+                <use xlink:href="./img/sprite.svg#icon-right-arrow-verylong"></use>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
     </div>
     <section class="enumeration-effects">
       <h2 class="enumeration-effects__title title title--left">Как это работает</h2>
@@ -122,13 +132,13 @@
             <div class="example__stat-item">
               <span class="example__stat-data">5 кг</span>
               <div class="example__stat-label-wrapper">
-                <span class="example__stat-label">снижение <br> веса</span>
+                <span class="example__stat-label">снижение&nbsp;<br>веса</span>
               </div>
             </div>
             <div class="example__stat-item">
               <span class="example__stat-data">60 дней</span>
               <div class="example__stat-label-wrapper">
-                <span class="example__stat-label">затрачено <br> времени</span>
+                <span class="example__stat-label">затрачено&nbsp;<br>времени</span>
               </div>
             </div>
           </div>
@@ -152,7 +162,8 @@
                   srcset="./img/before-desktop@1x.png 1x, ./img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)"
                   srcset="./img/before-tablet@1x.png 1x, ./img/before-tablet@2x.png 2x">
-                <img src="./img/before-mobile@1x.png" alt="Толстый кот" srcset="./img/before-mobile@2x.png 2x">
+                <img src="./img/before-mobile@1x.png" alt="Толстый кот" srcset="./img/before-mobile@2x.png 2x"
+                  width="320" height="240">
               </picture>
             </div>
             <div class="visualization__image visualization__image--after">
@@ -165,7 +176,8 @@
                 <source media="(min-width: 1300px)"
                   srcset="./img/after-desktop@1x.png 1x, ./img/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, ./img/after-tablet@2x.png 2x">
-                <img src="./img/after-mobile@1x.png" alt="Толстый кот" srcset="./img/after-mobile@2x.png 2x">
+                <img src="./img/after-mobile@1x.png" alt="Толстый кот" srcset="./img/after-mobile@2x.png 2x" width="320"
+                  height="240">
               </picture>
             </div>
           </div>
@@ -260,11 +272,13 @@
       </a>
     </div>
   </footer>
-  <script src="./js/page-header.js"></script>
+  <script src="./js/page-header.min.js"></script>
   <script src="./js/picturefill.min.js"></script>
-  <script src="./js/visualization.js"></script>
+  <script src="./js/visualization.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6e1179f4-f528-4415-832a-aa0f989b416c"></script>
-  <script src="./js/map.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </body>
 
 </html>

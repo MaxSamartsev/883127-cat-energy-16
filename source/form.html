@@ -6,7 +6,9 @@
   <title>Подбор программы питания от интернет магазина: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,13 +26,14 @@
       </ul>
     </nav>
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html" title="Перейти на главную страницу" tabindex="1"><span
+      <a class="page-header__logo" href="index.html" title="Перейти на главную страницу" tabindex="0"><span
           class="visually-hidden">При
           нажатии вы перейдете в начало главной страницы</span>
         <picture>
           <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-          <img src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="191" height="40">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="191"
+            height="40">
         </picture>
       </a>
       <button class="page-header__nav-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -82,18 +85,24 @@
         </div>
         <div class="form__contact-data">
           <div class="form__titel-contact titel-partition">
-            <h3 class="titel-partition__text">Контактные данные <br> (владельца кота)</h3>
+            <h3 class="titel-partition__text">Контактные данные&nbsp;<br>(владельца кота)</h3>
           </div>
           <div class="form__contact-container">
             <div class="form__input-wrapper form__input-wrapper--contact">
               <label class="form__label" for="email">E-mail:*</label>
               <input class="form__input-data form__input-data--contact" type="email" id="email" name="email" required
                 placeholder="kuklachev@gmail.com">
+              <svg class="form__contact-icon-image" width="17" height="13">
+                <use xlink:href="./img/sprite.svg#icon-mail"></use>
+              </svg>
             </div>
             <div class="form__input-wrapper form__input-wrapper--contact">
               <label class="form__label" for="telephone">Телефон:*</label>
               <input class="form__input-data form__input-data--contact" type="tel" id="telephone" name="telephone"
                 required placeholder="8 (960) 900-60-90">
+              <svg class="form__contact-icon-image form__contact-icon-image--phone" width="20" height="20">
+                <use xlink:href="./img/sprite.svg#icon-phone"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -217,10 +226,13 @@
       </a>
     </div>
   </footer>
-  <script src="./js/page-header.js"></script>
+  <script src="./js/page-header.min.js"></script>
   <script src="./js/picturefill.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6e1179f4-f528-4415-832a-aa0f989b416c"></script>
-  <script src="./js/map.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
 </body>
 
 </html>

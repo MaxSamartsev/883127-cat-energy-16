@@ -15,7 +15,8 @@ var centerDesktop = [59.939075, 30.319560];
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
     center: pointMap,
-    zoom: 17
+    zoom: 17,
+    controls: ['zoomControl', 'typeSelector',  'fullscreenControl']
   }, {
       searchControlProvider: 'yandex#search'
     }),
@@ -31,6 +32,7 @@ ymaps.ready(function () {
         iconImageOffset: miniOffset,
       });
   myMap.geoObjects.add(miniPlacemark);
+  myMap.behaviors.disable('scrollZoom');
 
   bigPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     hintContent: 'Офис Кэт энерджи',

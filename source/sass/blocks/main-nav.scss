@@ -2,6 +2,10 @@
   margin: 0;
 
   background-color: #ffffff;
+
+  @media screen and (min-width: $desktop-width) {
+    max-width: 45%;
+  }
 }
 
 .main-nav__list {

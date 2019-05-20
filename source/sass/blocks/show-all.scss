@@ -4,13 +4,10 @@
   align-items: center;
   padding-top: 26px;
   padding-bottom: 24px;
-
+  justify-content: flex-start;
   outline: 1px solid #e6e6e6;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 25px;
-    padding-bottom: 40px;
-
     background-color: inherit;
   }
 
@@ -23,7 +20,7 @@
   margin-bottom: 7px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-top: 29px;
+    margin-top: 28px;
     margin-bottom: 27px;
   }
 }
@@ -81,7 +78,7 @@
 
   @media screen and (min-width: $tablet-width) {
     min-height: 38px;
-    margin-bottom: 84px;
+    margin-bottom: 85px;
     padding-right: 40px;
     padding-left: 40px;
 
