@@ -32,7 +32,8 @@
 }
 
 .social__link--vkontakte svg {
-  margin-bottom: 2px;
+  position: relative;
+  top: -1px;
 
   @media screen and (min-width: $tablet-width) {
     width: 30px;
@@ -41,8 +42,10 @@
 }
 
 .social__link--facebook svg {
+  position: relative;
+  top: -2px;
+
   @media screen and (min-width: $tablet-width) {
-    position: relative;
     top: -2px;
     right: 7px;
 

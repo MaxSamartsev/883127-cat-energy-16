@@ -12,13 +12,15 @@
   }
 }
 
-.additional-goods__container {
+.additional-goods__wrapper {
   @media screen and (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
-    margin-right: 110px;
-    margin-left: 110px;
+    width: $desktop-width;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 

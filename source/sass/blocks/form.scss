@@ -4,21 +4,20 @@
   padding-bottom: 32px;
 
   @media screen and (min-width: $tablet-width) {
-    padding-bottom: 51px;
+    padding-bottom: 34px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-bottom: 61px;
+    padding-bottom: 36px;
   }
 }
 
-.form__main-container {
+.form__main-wrapper {
   @media screen and (min-width: $desktop-width) {
     display: flex;
     align-items: flex-start;
-    margin-right: 40px;
-    margin-left: 40px;
     padding-top: 1px;
+    padding-left: 40px;
   }
 }
 
@@ -43,8 +42,9 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 51%;
-    margin-right: 40px;
+    width: 570px;
+    margin-left: 0;
+    margin-right: 80px;
   }
 }
 
@@ -195,10 +195,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 50%;
+    width: 570px;
     margin-top: 29px;
-    margin-right: 70px;
-    margin-left: 40px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -321,7 +321,7 @@
   }
 }
 
-.form__contact-container {
+.form__contact-wrapper {
   padding-right: 20px;
   padding-left: 20px;
 
@@ -332,8 +332,9 @@
 
   @media screen and (min-width: $desktop-width) {
     display: flex;
-    padding-right: 110px;
-    padding-left: 110px;
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -346,7 +347,7 @@
   }
 }
 
-.form__comment-container {
+.form__comment-wrapper {
   padding-right: 21px;
   padding-left: 21px;
 
@@ -356,8 +357,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    padding-right: 41px;
+    padding-left: 41px;
   }
 }
 
@@ -407,7 +408,6 @@
 
 .form__additional-data {
   padding-top: 29px;
-  padding-bottom: 23px;
 
   @media screen and (min-width: $tablet-width) {
     padding-bottom: 17px;
@@ -423,7 +423,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 29px;
-  margin-bottom: 0;
+  margin-bottom: 23px;
   padding-right: 20px;
   padding-left: 20px;
 
@@ -433,15 +433,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 60px;
+    margin-bottom: 17px;
     padding-right: 80px;
     padding-left: 80px;
   }
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
-    justify-content: space-around;
-    padding-right: 20px;
-    padding-left: 122px;
+    justify-content: space-between;
+    padding-right: 29px;
+    padding-left: 51px;
   }
 }
 
@@ -454,7 +455,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 25%;
+    width: 245px;
+    padding-left: 46px;
   }
 }
 
@@ -464,7 +466,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-left: 45px;
+    padding-left: 46px;
   }
 }
 
@@ -559,8 +561,9 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-top: 25px;
     padding-right: 110px;
-    padding-left: 40px;
+    padding-left: 41px;
   }
 }
 
@@ -589,6 +592,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 568px;
+    margin-left: 0;
   }
 }
 

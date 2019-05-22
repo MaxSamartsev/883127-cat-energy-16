@@ -1,9 +1,14 @@
 .page-footer {
+  background-color: #f2f2f2;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: #f2f2f2;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
@@ -15,8 +20,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    padding-right: 40px;
+    padding-left: 40px;
+    max-width: $desktop-width;
+    margin: 0 auto;
   }
 }
 

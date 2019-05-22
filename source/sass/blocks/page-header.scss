@@ -13,7 +13,10 @@
 
   @media screen and (min-width: $desktop-width) {
     margin-top: 54px;
-    padding-right: 110px;
+    padding-right: 40px;
+    max-width: $desktop-width;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
   }
 }
 
@@ -79,7 +82,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-left: 86px;
+    padding-left: 16px;
   }
 }
 

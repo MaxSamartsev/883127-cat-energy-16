@@ -1,13 +1,18 @@
 .titel-partition {
-  position: relative;
-
-  min-height: 30px;
-  overflow: visible;
-
   background-image: linear-gradient(to bottom, transparent 0, transparent 14px, #68b738 14px, #68b738 17px, transparent 17px, transparent 100%);
 
   @media screen and (min-width: $tablet-width) {
     background-image: linear-gradient(to bottom, transparent 0, transparent 22px, #68b738 22px, #68b738 25px, transparent 25px, transparent 100%);
+  }
+}
+
+.titel-partition__container {
+  position: relative;
+  min-height: 30px;
+
+  @media screen and (min-width: $tablet-width) {
+    max-width: $desktop-width;
+    margin: 0 auto;
   }
 }
 
@@ -34,7 +39,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-left: 70px;
+    margin-left: 0;
   }
 }
 
